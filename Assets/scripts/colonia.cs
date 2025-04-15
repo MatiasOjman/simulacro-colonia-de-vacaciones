@@ -9,6 +9,8 @@ public class colonia : MonoBehaviour
     int profesorJuvenil;
     int profesorInfantil;
     int coordinador;
+    int listaEsperaJuv;
+    int listaEsperaInf;
     int listaEspera;
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,10 @@ public class colonia : MonoBehaviour
         profesorJuvenil = cantidadJuveniles / 20;
         Debug.Log("Se necesitan " + profesorJuvenil + " profesores para los inscriptos juveniles");
 
+        coordinador = (profesorInfantil + profesorJuvenil) / 5;
 
-
+        listaEsperaJuv = cantidadJuveniles % 20 ;
+        listaEsperaInf = cantidadInfantiles % 10;
 
 
 
